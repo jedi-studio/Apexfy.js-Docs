@@ -1,0 +1,12 @@
+input: .
+output: .retype
+url:  https://apexifyjs.jedi-studio.com
+branding:
+  title: Apexify.js
+  label: Docs
+links:
+- text: Getting Started
+  link: https://apexifyjs.jedi-studio.com/docs/introduction
+footer:
+  copyright: "&copy; Copyright {{ 2024 }}. All rights reserved."
+  icon: ":rocket:"
