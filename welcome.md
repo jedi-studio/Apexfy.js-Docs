@@ -2,7 +2,7 @@
 
 Greetings everyone! 🌟 This marks the release of a beta version for our package. If you encounter any issues or need assistance, feel free to reach out. Direct message me on Discord at `jedi.tsx` (ID: 1130583393176920095).
 
-![Apexify.js](https://media.discordapp.net/attachments/1134572786262736996/1229532951042326589/apex_banner.png?ex=663006cb&is=661d91cb&hm=5795fbcbd8bb66884e613c0d94ae8231218151a2b8926b54337c35201fffe7a7&=&format=webp&quality=lossless&width=1440&height=508)
+![Apexify.js](./images/apex-banner.png)
 
 ## Introduction
 

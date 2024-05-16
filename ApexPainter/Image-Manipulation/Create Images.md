@@ -32,7 +32,7 @@ const painter = new ApexPainter();
 
 - You can use your custom background by converting it into buffer and use it in createImage.
 
-[!ref How To Buffer An Image](/Apexify.js/canvas/Buffer.md)
+[!ref How To Buffer An Image](../Image-Enhancement/Buffer.md)
 
 ```javascript
 const images = [

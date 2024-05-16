@@ -2,7 +2,7 @@
 
 ## Line Chart
 
-![Line Chart](https://media.discordapp.net/attachments/1206055041065033833/1235109324142018620/lineChart.png?ex=66332cb2&is=6631db32&hm=19b5a800f85d78b2c24c554cf759fa1a2d278fdcae9b4a68e4b888c5f740b9d9&=&format=webp&quality=lossless&width=1082&height=662)
+![Line Chart](../../../images/lineChart.png)
 
 ==- Code Sample
 ```js
@@ -105,7 +105,7 @@ const chartBuffer = await painter.createChart(data, { chartType: 'line', chartNu
 
 ## Bar Chart
 
-![Bar Chart](https://media.discordapp.net/attachments/1206055041065033833/1235092990461087805/barChart.png?ex=66331d7b&is=6631cbfb&hm=6865c35ddbdf10c0d6996ecefd729b5517e4d5ca9a958e78db07a690a6de7d71&=&format=webp&quality=lossless&width=883&height=662)
+![Bar Chart](../../../images//barChart.png)
 
 ==- Code Sample
 ```js
