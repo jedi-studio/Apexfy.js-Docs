@@ -37,7 +37,6 @@ client.on('messageCreate', async (message) => {
   if (message.author.bot) return;
 
   const aiOptions = {
-
     voice: {
       textVoice: {
         enable: true,
@@ -74,7 +73,8 @@ const aiOptions = {
     numOfImages: 2,
     nsfw: {
       enable: false,
-      keywords: ['first word', 'second word']
+      keywords: ['first word', 'second word'],
+      deepCheck: true
     },
     enhancer: {
       enable: false,
@@ -248,9 +248,8 @@ const negativePrompt = interaction.options.getString('negative') || '';
 
 
   const response = await ApexImagine(modal, prompt, { number: count, negative: negativePrompt });
-  const uniqueUrls = new Set(response);
 
-  const attachments = Array.from(uniqueUrls).map(url => new AttachmentBuilder(url));
+  const attachments = Array.from(response).map(url => new AttachmentBuilder(url));
 
   await interaction.editReply({ files: attachments });
 ```
