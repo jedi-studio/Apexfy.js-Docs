@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://apexifyjs.jedi-studio.com/sitemap.xml.gz
