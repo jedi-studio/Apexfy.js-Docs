@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.769992466453">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.770046880802">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.769992466453" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.5.0.770046880802" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.769992466453" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.770046880802" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.769992466453" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.769992466453" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.770046880802" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.770046880802" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -204,7 +204,7 @@
 </ul>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-javascript"><code v-pre class="language-javascript">const image = './image.png';
-const RGBA_COLOR = {
+const RGB_COLOR = {
  red: 20,
  green: 225,
  blue: 40
@@ -212,7 +212,7 @@ const RGBA_COLOR = {
 </doc-codeblock></div>
 <p>4.<strong>Generate the converted image</strong>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const outputColorRemoval = await painter.colorsRemover(image, RGBA_COLOR);
+<pre class="language-javascript"><code v-pre class="language-javascript">const outputColorRemoval = await painter.colorsRemover(image, RGB_COLOR);
 console.log(outputColorRemoval); // Returns a buffer image.</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="color-removal-parameter">
@@ -239,10 +239,10 @@ console.log(outputColorRemoval); // Returns a buffer image.</code></pre>
 <td>The path of the image to convert. Can be a local file path or a URL.</td>
 </tr>
 <tr>
-<td><code v-pre>RGBA_COLOR</code></td>
+<td><code v-pre>RGB_COLOR</code></td>
 <td><code v-pre>object</code></td>
 <td>True</td>
-<td>The RGBA color to be removed from the image.</td>
+<td>The RGB color to be removed from the image.</td>
 </tr>
 </tbody>
 </table>

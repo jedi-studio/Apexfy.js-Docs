@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.769992466453">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.770046880802">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 3.5.0">
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.769992466453" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.5.0.770046880802" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.769992466453" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.770046880802" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.769992466453" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.769992466453" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.770046880802" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.770046880802" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -217,7 +217,6 @@ client.on('messageCreate', async (message) =&gt; {
   if (message.author.bot) return;
 
   const aiOptions = {
-
     voice: {
       textVoice: {
         enable: true,
@@ -256,7 +255,8 @@ client.on('messageCreate', async (message) =&gt; {
     numOfImages: 2,
     nsfw: {
       enable: false,
-      keywords: ['first word', 'second word']
+      keywords: ['first word', 'second word'],
+      deepCheck: true
     },
     enhancer: {
       enable: false,
@@ -266,7 +266,9 @@ client.on('messageCreate', async (message) =&gt; {
       sampler: 'DDIM',
       steps: 20,
       seed: -1,
-      imgStyle: 'enhance'
+      imgStyle: 'enhance',
+      width: 512,
+      height: 512
     }
   }
 };</code></pre>
@@ -469,10 +471,9 @@ const count = interaction.options.getInteger('count');
 const negativePrompt = interaction.options.getString('negative') || '';
 
 
-  const response = await ApexImagine(modal, prompt, { number: count, negative: negativePrompt });
-  const uniqueUrls = new Set(response);
+  const response = await ApexImagine(modal, prompt, { count: number, negative: negativePrompt });
 
-  const attachments = Array.from(uniqueUrls).map(url =&gt; new AttachmentBuilder(url));
+  const attachments = Array.from(response).map(url =&gt; new AttachmentBuilder(url));
 
   await interaction.editReply({ files: attachments });</code></pre>
 </doc-codeblock></div>
@@ -529,7 +530,7 @@ const negativePrompt = interaction.options.getString('negative') || '';
 <td>The prompt provided by the user.</td>
 </tr>
 <tr>
-<td style="text-align: left;"><code v-pre>number</code></td>
+<td style="text-align: left;"><code v-pre>count</code></td>
 <td style="text-align: center;"><code v-pre>number</code></td>
 <td>false</td>
 <td>Number of images to generate.</td>
