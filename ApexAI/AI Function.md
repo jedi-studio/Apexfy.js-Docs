@@ -29,7 +29,9 @@ import { ApexChat, ApexImagine } from 'apexify.js';
 The `ApexChat` function is used to generate AI-driven text responses. It takes a model and a prompt as input and returns a string response.
 
 ```javascript
-const response = await ApexChat(model, prompt);
+const model = 'gemini';
+const prompt = 'hey how r u?'
+const chatreply = await ApexChat(model, prompt);
 console.log(response); // Logs the AI-generated response as a string
 ```
 
@@ -38,7 +40,9 @@ console.log(response); // Logs the AI-generated response as a string
 The `ApexImagine` function is used to generate AI-driven images. It takes a model, a prompt, and optional parameters as input and returns an array of image URLs.
 
 ```javascript
-const imageUrls = await ApexImagine(model, prompt, { number: count, negative: negativePrompt });
+const model = 'prodia';
+const prompt = 'draw a cat'
+const imgURLS = await ApexImagine(model, prompt, { count: 2, nsfw: false, deepCheck: true, negative_prompt: 'not blur image', cfg_scale: 9, width: 1024, height: 1024, steps: 19, seed: -1, sampler: "DPM-Solver", image_style: "Cinematic" });
 console.log(imageUrls); // Logs an array of image URLs
 ```
 

@@ -35,7 +35,7 @@ const painter = new ApexPainter();
 
 ```javascript
 const image = './image.png';
-const RGBA_COLOR = {
+const RGB_COLOR = {
  red: 20,
  green: 225,
  blue: 40
@@ -45,7 +45,7 @@ const RGBA_COLOR = {
 4.**Generate the converted image**:
 
 ```javascript
-const outputColorRemoval = await painter.colorsRemover(image, RGBA_COLOR);
+const outputColorRemoval = await painter.colorsRemover(image, RGB_COLOR);
 console.log(outputColorRemoval); // Returns a buffer image.
 ```
 
@@ -54,4 +54,4 @@ console.log(outputColorRemoval); // Returns a buffer image.
 | Name           | Type     | Required | Description                                                           |
 |----------------|----------|----------|-----------------------------------------------------------------------|
 | `image`        | `string` | True     | The path of the image to convert. Can be a local file path or a URL. |
-| `RGBA_COLOR` | `object` | True     | The RGBA color to be removed from the image. |
+| `RGB_COLOR` | `object` | True     | The RGB color to be removed from the image. |
