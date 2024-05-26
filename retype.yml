@@ -6,7 +6,7 @@ branding:
   label: Docs
 links:
 - text: Getting Started
-  link: https://apexifyjs.jedi-studio.com/docs/introduction
+  link: https://apexifyjs.jedi-studio.com
 footer:
   copyright: "&copy; Copyright {{ 2024 }}. All rights reserved."
   icon: ":rocket:"
