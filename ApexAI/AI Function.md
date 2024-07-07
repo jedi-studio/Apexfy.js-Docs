@@ -6,18 +6,18 @@ This script enables the ApexAI to process messages in a designated channel, perf
 
 #### Importing Functions
 
-You need to import two main functions from `apexify.js`: `ApexChat` and `ApexImagine`.
+You need to import three main functions from `apexify.js`: `ApexChat` & `ApexImagine` & `ApexListener`.
 
 +++ JS
 
 ```javascript
-const { ApexChat, ApexImagine } = require('apexify.js'); 
+const { ApexChat, ApexImagine, ApexListener } = require('apexify.js'); 
 ```
 
 +++ TS
 
 ```typescript
-import { ApexChat, ApexImagine } from 'apexify.js'; 
+import { ApexChat, ApexImagine, ApexListener } from 'apexify.js'; 
 ```
 
 +++
@@ -44,6 +44,22 @@ const model = 'prodia';
 const prompt = 'draw a cat'
 const imgURLS = await ApexImagine(model, prompt, { count: 2, nsfw: false, deepCheck: true, negative_prompt: 'not blur image', cfg_scale: 9, width: 1024, height: 1024, steps: 19, seed: -1, sampler: "DPM-Solver", image_style: "Cinematic" });
 console.log(imageUrls); // Logs an array of image URLs
+```
+
+###### ApexListener
+
+The `ApexListener` function is used to hear voice/audio message/files and respond to them with text you caan use voice message ability to make the ai repond back with audio.
+
+```javascript
+const options = {
+ filePath: './audio.ogg' // The file of the audio/voice file or you can put url instead.
+ model: 'gemini', // Pick your desired model
+ prompt: 'Please listen carefully', // Your prompt along with audio if you want to.
+ lang: 'eng', // The language of the output response/the voice language.
+ apiKey: '' // You can provide your own apiKey from  [api-key](https://console.groq.com) in case you faced rate limit
+}
+const response = await ApexListener(options);
+console.log(response); // Logs the response.
 ```
 
 ### Parameters
@@ -74,5 +90,3 @@ const imageNegativePrompt = 'A dark and gloomy landscape'; // Negative prompt fo
 const imageUrls = await ApexImagine(imageModel, imagePrompt, { number: imageCount, negative: imageNegativePrompt });
 console.log(imageUrls); // Logs an array of image URLs
 ```
-
-This example demonstrates how to use both `ApexChat` and `ApexImagine` functions with appropriate prompts and parameters. Adjust the model names, prompts, and parameters according to your specific use case.
