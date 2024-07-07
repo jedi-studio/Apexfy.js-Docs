@@ -96,10 +96,11 @@ const aiOptions = {
 
 Use the following code to enable chat processing:
 
-- **chatModel:** The chat model of the ai. There is plenty of them please check modals at previews & samples.
+- **chatModal:** The chat model of the ai. There is plenty of them please check modals at previews & samples.
 - **readFiles:** To read files such as PDF/TXT. Soon will read ppt & docs files.
 - **readImages:** Without enabling it the ai read images but only those with text on them. If images you will provide contains no text it would be better to enable this.
 - **API_KEY:** Add your own key if using gemini-pro/gemini-flash. Add your own key in case you only recieved rate limit.
+- **lang:** The language of the voice/audio message has been sent to detect and recognize and to respond to it.
 - **personality:** Personalize your ai. Create a text file add the personality then define its path and add it.
 - **memory:** To enable memory into your ai and remember chat history. You can add in id either server/channel/user ID.
 - **TypeWrting:** To enable the ability to text like real ai bot.
@@ -108,10 +109,11 @@ Use the following code to enable chat processing:
 ```javascript
 const aiOptions = {
   chat: {
-    chatModel: "v3",
+    chatModal: "v3",
     readFiles: true,
     readImages: false,
     API_KEY: '',
+    lang: 'eng',
     personality: '',
     memory: {
       memoryOn:  false,
