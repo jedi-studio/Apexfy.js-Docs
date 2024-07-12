@@ -96,8 +96,8 @@ console.log(textBuffer); // Returns a buffer image.
 | `color`        | `string`                  | False        | Specifies the color of the text.                                                            |
 | `maxWidth`     | `number`                  | False         | Specifies the maximum width of the text for wrapping.                                       |
 | `lineHeight`   | `number`                  | False         | Specifies the line height for wrapped text.                                                 |
-| `textAlign`    | `'center' | 'left' | 'right' | 'start'` | No | Specifies the text alignment.                                                              |
-| `textBaseline` | `string`                  | False         | Specifies the baseline for letters.                                                         |
+| `textAlign`    | `string` | False | Specifies the text alignment whether center, end, start, left, right, or justify.                                                              |
+| `textBaseline` | `string`                  | False         | Specifies the baseline for letters whether to be alphabetic, bottom, hanging, ideographic, top, middle.                                                         |
 | `outlined`       | `boolean`                 | False         | Specifies whether to make text outlined and non-filled.                                            |
 | `opacity`       | `number`                 | False         | Specifies whether to apply opacity on the text its self.                                            |
 | `rotation`       | `number`                 | False         | Specifies whether to apply rotation to the text.                                            |
