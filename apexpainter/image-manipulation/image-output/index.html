@@ -9,24 +9,24 @@
     <meta name="generator" content="Retype 3.5.0">
 
     <!-- Primary Meta Tags -->
-    <title>ApexImagine Modals</title>
-    <meta name="title" content="ApexImagine Modals">
-    <meta name="description" content="v1">
+    <title>Image Output</title>
+    <meta name="title" content="Image Output">
+    <meta name="description" content="This guide will help you use the ApexPainter class from the apexify.js library to create and customize the output format of your drawings, including...">
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://apexifyjs.jedi-studio.com/previews--samples/apexai/imagine-modals/">
+    <link rel="canonical" href="https://apexifyjs.jedi-studio.com/apexpainter/image-manipulation/image-output/">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://apexifyjs.jedi-studio.com/previews--samples/apexai/imagine-modals/">
-    <meta property="og:title" content="ApexImagine Modals">
-    <meta property="og:description" content="v1">
+    <meta property="og:url" content="https://apexifyjs.jedi-studio.com/apexpainter/image-manipulation/image-output/">
+    <meta property="og:title" content="Image Output">
+    <meta property="og:description" content="This guide will help you use the ApexPainter class from the apexify.js library to create and customize the output format of your drawings, including...">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://apexifyjs.jedi-studio.com/previews--samples/apexai/imagine-modals/">
-    <meta property="twitter:title" content="ApexImagine Modals">
-    <meta property="twitter:description" content="v1">
+    <meta property="twitter:url" content="https://apexifyjs.jedi-studio.com/apexpainter/image-manipulation/image-output/">
+    <meta property="twitter:title" content="Image Output">
+    <meta property="twitter:description" content="This guide will help you use the ApexPainter class from the apexify.js library to create and customize the output format of your drawings, including...">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
@@ -35,6 +35,7 @@
     <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.774353691110" data-turbo-eval="false" defer></script>
     <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
     <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.774353691110" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.774353691110" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -163,90 +164,99 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="apeximagine-modals" class="break-words">
+<doc-anchor-target id="image-output" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#apeximagine-modals">#</doc-anchor-trigger>
-        <span>ApexImagine Modals</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#image-output">#</doc-anchor-trigger>
+        <span>Image Output</span>
     </h1>
 </doc-anchor-target>
-<ul>
-<li>v1</li>
-<li>v2</li>
-<li>v2-beta</li>
-<li>v3</li>
-<li>lexica</li>
-<li>prodia</li>
-<li>animefy</li>
-<li>raava</li>
-<li>shonin</li>
-<li>animagineXLV3_v30.safetensors [75f2f05b]</li>
-<li>dreamshaperXL10_alpha2.safetensors [c8afe2ef]</li>
-<li>dynavisionXL_0411.safetensors [c39cc051]</li>
-<li>juggernautXL_v45.safetensors [e75f5471]</li>
-<li>realismEngineSDXL_v10.safetensors [af771c3f]</li>
-<li>realvisxlV40.safetensors [f7fdcb51]</li>
-<li>sd_xl_base_1.0.safetensors [be9edd61]</li>
-<li>sd_xl_base_1.0_inpainting_0.1.safetensors [5679a81a]</li>
-<li>turbovisionXL_v431.safetensors [78890989]</li>
-<li>3Guofeng3_v34.safetensors [50f420de]</li>
-<li>absolutereality_V16.safetensors [37db0fc3]</li>
-<li>absolutereality_v181.safetensors [3d9d4d2b]</li>
-<li>amIReal_V41.safetensors [0a8a2e61]</li>
-<li>analog-diffusion-1.0.ckpt [9ca13f02]</li>
-<li>anythingv3_0-pruned.ckpt [2700c435]</li>
-<li>anything-v4.5-pruned.ckpt [65745d25]</li>
-<li>anythingV5_PrtRE.safetensors [893e49b9]</li>
-<li>AOM3A3_orangemixs.safetensors [9600da17]</li>
-<li>blazing_drive_v10g.safetensors [ca1c1eab]</li>
-<li>cetusMix_Version35.safetensors [de2f2560]</li>
-<li>childrensStories_v13D.safetensors [9dfaabcb]</li>
-<li>childrensStories_v1SemiReal.safetensors [a1c56dbb]</li>
-<li>childrensStories_v1ToonAnime.safetensors [2ec7b88b]</li>
-<li>Counterfeit_v30.safetensors [9e2a8f19]</li>
-<li>cuteyukimixAdorable_midchapter3.safetensors [04bdffe6]</li>
-<li>cyberrealistic_v33.safetensors [82b0d085]</li>
-<li>dalcefo_v4.safetensors [425952fe]</li>
-<li>deliberate_v2.safetensors [10ec4b29]</li>
-<li>deliberate_v3.safetensors [afd9d2d4]</li>
-<li>dreamlike-anime-1.0.safetensors [4520e090]</li>
-<li>dreamlike-diffusion-1.0.safetensors [5c9fd6e0]</li>
-<li>dreamlike-photoreal-2.0.safetensors [fdcf65e7]</li>
-<li>dreamshaper_6BakedVae.safetensors [114c8abb]</li>
-<li>dreamshaper_7.safetensors [5cf5ae06]</li>
-<li>dreamshaper_8.safetensors [9d40847d]</li>
-<li>edgeOfRealism_eorV20.safetensors [3ed5de15]</li>
-<li>EimisAnimeDiffusion_V1.ckpt [4f828a15]</li>
-<li>elldreths-vivid-mix.safetensors [342d9d26]</li>
-<li>epicrealism_naturalSinRC1VAE.safetensors [90a4c676]</li>
-<li>ICantBelieveItsNotPhotography_seco.safetensors [4e7a3dfd]</li>
-<li>juggernaut_aftermath.safetensors [5e20c455]</li>
-<li>lofi_v4.safetensors [ccc204d6]</li>
-<li>lyriel_v16.safetensors [68fceea2]</li>
-<li>majicmixRealistic_v4.safetensors [29d0de58]</li>
-<li>mechamix_v10.safetensors [ee685731]</li>
-<li>meinamix_meinaV9.safetensors [2ec66ab0]</li>
-<li>meinamix_meinaV11.safetensors [b56ce717]</li>
-<li>neverendingDream_v122.safetensors [f964ceeb]</li>
-<li>openjourney_V4.ckpt [ca2f377f]</li>
-<li>pastelMixStylizedAnime_pruned_fp16.safetensors [793a26e8]</li>
-<li>portraitplus_V1.0.safetensors [1400e684]</li>
-<li>protogenx34.safetensors [5896f8d5]</li>
-<li>Realistic_Vision_V1.4-pruned-fp16.safetensors [8d21810b]</li>
-<li>Realistic_Vision_V2.0.safetensors [79587710]</li>
-<li>Realistic_Vision_V4.0.safetensors [29a7afaa]</li>
-<li>Realistic_Vision_V5.0.safetensors [614d1063]</li>
-<li>redshift_diffusion-V10.safetensors [1400e684]</li>
-<li>revAnimated_v122.safetensors [3f4fefd9]</li>
-<li>rundiffusionFX25D_v10.safetensors [cd12b0ee]</li>
-<li>rundiffusionFX_v10.safetensors [cd4e694d]</li>
-<li>sdv1_4.ckpt [7460a6fa]</li>
-<li>v1-5-pruned-emaonly.safetensors [d7049739]</li>
-<li>v1-5-inpainting.safetensors [21c7ab71]</li>
-<li>shoninsBeautiful_v10.safetensors [25d8c546]</li>
-<li>theallys-mix-ii-churned.safetensors [5d9225a4]</li>
-<li>timeless-1.0.ckpt [7c4971d4]</li>
-<li>toonyou_beta6.safetensors [980f6b15]</li>
-</ul>
+<p>This guide will help you use the <code v-pre>ApexPainter</code> class from the <code v-pre>apexify.js</code> library to create and customize the output format of your drawings, including backgrounds, images, and text.</p>
+<doc-anchor-target id="usage">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#usage">#</doc-anchor-trigger>
+        <span>Usage</span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="1-import-the-apexpainter-class">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-import-the-apexpainter-class">#</doc-anchor-trigger>
+        <span>1. Import the <code v-pre>ApexPainter</code> class</span>
+    </h3>
+</doc-anchor-target>
+<p>First, you need to import the <code v-pre>ApexPainter</code> class from the <code v-pre>apexify.js</code> library.</p>
+<doc-tabs>
+<doc-tab v-cloak id="js">
+<template #title>JS</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const { ApexPainter } = require('apexify.js'); </code></pre>
+</doc-codeblock></div>
+</doc-tab>
+<doc-tab v-cloak id="ts">
+<template #title>TS</template>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { ApexPainter } from 'apexify.js'; </code></pre>
+</doc-codeblock></div>
+</doc-tab>
+</doc-tabs>
+<doc-anchor-target id="2-create-an-instance-of-the-apexpainter-class">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-create-an-instance-of-the-apexpainter-class">#</doc-anchor-trigger>
+        <span>2. Create an instance of the <code v-pre>ApexPainter</code> class</span>
+    </h3>
+</doc-anchor-target>
+<p>Next, create an instance of the <code v-pre>ApexPainter</code> class. This instance will be used to perform various drawing operations.</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const painter = new ApexPainter();</code></pre>
+</doc-codeblock></div>
+<doc-anchor-target id="3-draw-your-desired-image">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-draw-your-desired-image">#</doc-anchor-trigger>
+        <span>3. Draw your desired image</span>
+    </h3>
+</doc-anchor-target>
+<p>Now, you can start creating your desired image by drawing the background, adding images, and overlaying text. Finally, you can use the <code v-pre>paint.outPut()</code> method to get the result in your chosen format.</p>
+<p>Here is a detailed example:</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">async function run() {
+    // Create an instance of ApexPainter with the desired output type
+    const paint = new ApexPainter({ type: 'url' }); // You can choose from 'url', 'dataURL', 'buffer', 'blob', 'base64', 'arraybuffer'
+
+    // Define the background configuration
+    const background = {
+        // Your background drawing properties
+    };
+
+    // Define the images you want to add
+    const images = [
+        {
+            source: '' // Your image source
+        }
+    ];
+
+    // Define the text you want to overlay
+    const texts = [
+        {
+            text: '' // Your text content
+        }
+    ];
+
+    // Create the background canvas
+    const bg = await paint.createCanvas(background); // Creating Background
+
+    // Add images on top of the background
+    const image_Bg = await paint.createImage(images, bg); // Creating Image + Background
+
+    // Add text on top of the image and background
+    const finalResult = await paint.createText(texts, image_Bg); // Creating Image + Background + Text
+
+    // Convert the final result into your desired format
+    const output = paint.outPut(finalResult); // Converting final results into your desired format
+    console.log(output); // This will return the output as an online hosted URL image (or another format you specified)
+}
+
+// Execute the function
+run();</code></pre>
+</doc-codeblock></div>
 
                                 
                                 <!-- Required only on API pages -->
@@ -256,20 +266,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../previews--samples/apexai/chat-modals/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../apexpainter/image-manipulation/gif-creation/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Apex​Chat Modals</span>
+                                                <span class="block mt-1">GIF Creation Guide</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../previews--samples/apexai/enhancer-modals/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../previews--samples/apexai/preview/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Enhancer Modals</span>
+                                                <span class="block mt-1">AI Preview</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -313,6 +323,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "ApexImagine Modals", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "Image Output", level: 3, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>
