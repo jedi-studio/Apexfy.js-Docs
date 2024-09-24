@@ -79,7 +79,12 @@ const canvasBg = {
 
 ```javascript
 const bufferBackground = await painter.createCanvas(canvasBg);
-console.log(bufferBackground); // Returns a buffer image.
+console.log(bufferBackground); // Returns a object.
+
+{
+buffer: .... // The Buffer of the bg
+canvas: .... // Deatils used in the canvas
+}
 ```
 
 ### Background Parameters:

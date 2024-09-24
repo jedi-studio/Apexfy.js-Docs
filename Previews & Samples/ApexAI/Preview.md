@@ -4,71 +4,61 @@
 
 ### Simple Images
 
-![Example 1](../../images/exmaple-image1.png)
+![Example 3](../../images/image-gen3.png)
 
-![Example 2](../../images/example-image-2.png)
+![Example 2](../../images/image-gen-2.png)
 
-### A More Detailed Image
+### A More Detailed Image (Clear Images)
 
-![Example 3](../../images/exmaple-image-3.png)
+![Example 1](../../images/image-gen-1.png)
 
-![Example 4](../../images/exmaple-image-4.png)
+![Example 4](../../images/image-gen4.png)
 
-![Example 5](../../images/example-image-5.png)
-
-![Example 6](../../images/exmpale-6.png)
-
-![Example 7](../../images/example-imae-7.png)
-
-![Example 8](../../images/example-8.png)
-
-![Example 9](../../images/example-9.png)
-
-![Example 10](../../images/example-10.png)
-
-![Example 11](../../images/example-11.png)
 
 ## AI (Attachment Analysis)
 
 ### Images
 
-![Example 12](../../images//readImages.png)
+![Example 5](../../images/image-gen-5.png)
+
+![Example 6](../../images/image-gen-6.png)
+
 
 ### Files
 
-![Example 13](../../images/readFiles.png)
+![Example 7](../../images/file-reader.png)
 
 ### PDF
 
-![Example 14](../../images/pdfFile.png)
+![Example 8](../../images/pdfReader.png)
 
 
 ## AI (Voice)
 
 ### Voice Message (English)
 
-![Example 15](../../images/voice-response.png)
+![Example 9](../../images/Voice-msg.png)
 
 ## AI (Normal Chat)
 
 ### Chat (English)
 
-![Example 16](../../images/english-text.png)
+![Example 10](../../images/long-response.png)
 
 ### Chat (Arabic)
 
-![Example 17](../../images/arabic-chating.png)
+![Example 11](../../images/arabic-chat.png)
 
 ### Chat (Polish)
 
-![Example 18](../../images/polish-Chatting.png)
+![Example 12](../../images/polish-chat.png)
 
 
 ### Chat (Deutch)
 
-![Example 19](../../images/germany-chatting.png)
+![Example 13](../../images/deutch-chat.png)
 
 
 ### Chat (French)
 
-![Example 20](../../images/french-Chatting.png)
+![Example 14](../../images/french-chat.png)

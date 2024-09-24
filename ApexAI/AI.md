@@ -1,179 +1,211 @@
-# ApexAI
+# 🧠 **ApexAI: Comprehensive AI Integration**
 
-This script enables the `ApexAI` to process messages in a designated channel, perform various tasks including `voice processing`, `image processing`, `chat processing`, and more.
+**ApexAI** offers a powerful blend of AI capabilities, including **voice processing**, **image generation**, and **chat interactions**. It's built for flexible and dynamic AI use, allowing deep customization through API keys, role-playing features, and memory retention for more interactive experiences.
 
-## Installation
+---
 
-1.**Import the `ApexAI` function** from the `apexify.js` library:
+## 🚀 **Installation**
 
-+++ JS
+Start by importing `ApexAI` from the `apexify.js` library:
+
+### JavaScript
 
 ```javascript
 const { ApexAI } = require('apexify.js'); 
 ```
 
-+++ TS
+### TypeScript
 
 ```typescript
 import { ApexAI } from 'apexify.js'; 
 ```
 
-+++
+---
 
-## Usage
+## 💡 **ApexAI Capabilities**
 
-### Voice Processing
+ApexAI supports multiple AI-driven features: **Voice Processing**, **Image Generation**, **Chat Interactions**, and additional customization options. Let's explore each component in detail.
 
-Use the following code to enable voice processing:
+---
 
-- **voice_code:** Is the language code and voice speech. You may find more at voice modals in previews & samples in ApexAI section.
-- **apiKey:** The key for the api for apexAI and zenithAI voiceModal. You can purchase a key by contacting us on discord on the server.
-- **type:** The person either man/woman and old/teen/adult.
+### 🔊 **Voice Processing**
+
+Leverage ApexAI's voice processing to convert text into speech, choose voice models, and specify languages.
+
+#### Example Usage:
 
 ```javascript
-const { ApexAI } = require('apexify.js');
-
-client.on('messageCreate', async (message) => {
-  if (message.author.bot) return;
-
-  const aiOptions = {
-    voice: {
-      textVoice: {
-        enable: true,
-        voiceModal: "google",
-        voice_code: "en-US-3",
-        apiKey: "your-api-key",
-        type: "b"
-      }
+const aiOptions = {
+  voice: {
+    textVoice: {
+      enable: true,
+      voiceModel: "google",         // Select voice model
+      voice_code: "en-US-3",        // Language and voice code
+      apiKey: "your-api-key",       // Your API key
+      type: "b"                     // Voice type (e.g., b for male, female, etc.)
     }
-  };
-
-  await ApexAI(message, aiOptions)
-});
+  }
+};
 ```
 
-### Image Processing
+#### Key Parameters:
 
-Use the following code to enable image processing:
+- **`voice_code`**: Defines language and voice accent (e.g., `'en-US-3'`).
+- **`apiKey`**: API key for voice service (optional).
+- **`type`**: Defines voice type (e.g., `b` for specific voices like age or gender).
 
-- **drawTrigger:** The key word that triggers imagine.
-- **imageModel:** The modal that will be used for generating images. There is plenty of them please check modals at previews & samples in ApexAI section
-- **numOfImages:** Number of the generated images. The limit is 4.
-- **nsfw:** To enable anitNSFW. Making sure generated images doesnt contain nsfw. You can add your own keywords or keep it empty array to use default words.
-- **enhancer:** To enhance your prompt making it more descriptive and better visiualizing and to appy art into it.
+---
 
-`Note That:` drawTrigger is the first word of your message.
+### 🎨 **Image Generation**
+
+ApexAI can generate images based on user prompts and customizable settings.
+
+#### Example Usage:
 
 ```javascript
 const aiOptions = {
   imagine: {
-    enable: true,
-    drawTrigger: ["create", "رسم"],
-    imageModel: "prodia",
-    numOfImages: 2,
+    enable: true,                       // Whether to enbale or disbale the imagine feature
+    drawTrigger: ["create", "draw"],   // Keywords to trigger image generation
+    imageModel: "prodia",              // Select the model for image generation
+    numOfImages: 2,                    // Number of images to generate
+    ApiKeys: {
+        groqAPI: 'your-groq-api-key', 
+        electronHubKey: 'your-electron-api-key',
+        rsnAPIkey: 'your-rsn-api-key',
+        prodiaAPI: 'your-prodia-api-key',
+        freesedGPTApi: 'your-fresed-api-key',
+    },
     nsfw: {
-      enable: false,
-      keywords: ['first word', 'second word'],
+      enable: true,                    // Enable NSFW filtering
+      keywords: ['explicit', 'violence'],
       deepCheck: true
     },
     enhancer: {
-      enable: false,
+      enable: true,                    // Enhance the generated image
       enhancerModal: 'ESRGAN_4x',
-      negative_prompt: '',
+      negative_prompt: 'no text',
       cfg_scale: 7,
       sampler: 'DDIM',
       steps: 20,
-      seed: -1,
+      seed: -1,                        // Seed for reproducibility
       imgStyle: 'enhance',
       width: 512,
-      height: 512
+      height: 512,
+      upscale: 2
     }
   }
 };
 ```
 
-### Chat Processing
+#### Key Parameters:
 
-Use the following code to enable chat processing:
+- **`drawTrigger`**: Specifies words that trigger image generation.
+- **`imageModel`**: The AI model used for image generation (e.g., `'prodia'`).
+- **`nsfw`**: Enable NSFW filters to block inappropriate content.
+- **`enhancer`**: Settings to improve image quality using models like `'ESRGAN_4x'`.
+- **`dimensions`**: Adjust the **width** and **height** of the generated images.
+- **`steps`, `cfg_scale`, `sampler`, `seed`**: Fine-tune the image generation process.
 
-- **chatModal:** The chat model of the ai. There is plenty of them please check modals at previews & samples.
-- **readFiles:** To read files such as PDF/TXT. Soon will read ppt & docs files.
-- **readImages:** Without enabling it the ai read images but only those with text on them. If images you will provide contains no text it would be better to enable this.
-- **API_KEY:** Add your own key if using gemini-pro/gemini-flash. Add your own key in case you only recieved rate limit.
-- **lang:** The language of the voice/audio message has been sent to detect and recognize and to respond to it.
-- **personality:** Personalize your ai. Create a text file add the personality then define its path and add it.
-- **memory:** To enable memory into your ai and remember chat history. You can add in id either server/channel/user ID.
-- **TypeWrting:** To enable the ability to text like real ai bot.
+---
 
+### 💬 **Chat Interactions**
+
+ApexAI enables AI-powered chat responses, with memory retention and customizable personalities.
+
+#### Example Usage:
 
 ```javascript
 const aiOptions = {
   chat: {
-    chatModal: "v3",
-    readFiles: true,
-    readImages: false,
-    API_KEY: '',
-    lang: 'eng',
-    personality: '',
+    enable: true,                       // Whether to enbale or disbale the chat feature
+    chatModel: "v3",                    // Chat model (e.g., 'v3', 'gemini')
+    readFiles: true,                    // Enable file reading (PDFs, TXT)
+    readImages: false,                  // Enable/disable image text extraction
+    instruction: '',                    // To add instruction for the system to obey
     memory: {
-      memoryOn:  false,
-      id: ''
+      memoryOn: true,                   // Enable memory retention
+      id: 'server-id'                   // Unique identifier (e.g., server or user ID)
     },
     typeWriting: {
-      enable: false,
-      speed: 70,
-      delay: 2000
-    }
+      enable: true,                     // Simulate typewriting effect
+      speed: 70,                        // Typing speed (characters per second)
+      delay: 2000                       // Delay before typing starts (ms)
+    },
+    Api_Keys: {
+      groq_API: 'your-groq-api-key',
+      rsn_API: 'your-rsn-api-key',
+      geminiAPI: 'your-gemini-api-key'
+      electronHub_Key: 'your-electron-api-key',
+    },
+    lang: 'en',                         // Language of voice message
+    personality: '/path/to/personality.txt'  // Path to personality profile
   }
 };
 ```
 
-### Other Options
+#### Key Parameters:
 
-Additional options for configuring keyword responses, loader messages, channel settings, and permissions:
+- **`chatModel`**: The chat AI model (e.g., `'v3'`, `'gemini'`).
+- **`readFiles`**: Enable AI to read and interpret file contents (e.g., PDFs, TXT).
+- **`memory`**: Enable memory to recall past conversations for a specific user, server, or channel.
+- **`typeWriting`**: Add a typewriting effect with customizable speed and delay.
+- **`personality`**: Load a personality file to shape the AI's behavior.
 
-- **messageType:** Clarify the type of message either `send` or `reply` and add intital message content in bot response as you like.
-- **buttons:** To add buttons to the generated message.
-- **keywords && keywordResponses:** Make the ai reply to specific prompt with specific custom replies
-- **loader:** The intial message being sent before response.
-- **channel:** Specifying the channels for ai to work at.
-- **permissions:** Specifying the permissions that ai will respond to and blacklist user/roles
+---
+
+### ⚙️ **Other Customization Options**
+
+ApexAI allows further customizations, such as setting up message types, loader messages, and permission control.
+
+#### Example Usage:
 
 ```javascript
 const aiOptions = {
   others: {
+    onMention: true,
     messageType: {
       type: 'send',
-      intialContent: `<@${message.author.id}>,`
-    },
-    buttons: [row1, row2],
-    keywords: ["help", "info"],
-    keywordResponses: {
-      'help': "I'm here to assist you!",
-      'info': "Here is some information for you."
+      intialContent: `<@${message.author.id}>, Hello!`
     },
     loader: {
       enable: true,
-      loadingMessage: "Please wait while I process your request...",
+      loadingMessage: "Processing your request...",
       loadingTimer: 5000
-    },
-    channel: {
-      enable: true,
-      id: ['id1', 'id2']
     },
     permissions: {
       enable: true,
-      role: ['id1', 'id2'],
-      permission: ['ManageGuild', 'SendMessages'],
+      role: ['admin-role-id'],
       blockedUsers: ['user1', 'user2']
     }
   }
 };
 ```
 
-## Combined Options
+#### Key Features:
 
-- You can combine voice processing, image processing, chat processing, and other options in a single `aiOptions` object:
+- **`messageType`**: Choose between sending a new message or replying to a user.
+- **`loader`**: Display a loading message during processing.
+- **`permissions`**: Set access controls based on roles and users.
+- **`channel`**: Specify channels where the bot will respond.
+
+---
+
+## 🌟 **Key Features & Customizations**
+
+- **Voice Processing**: Convert text to speech with various voice models and accents.
+- **Image Generation**: Generate and enhance images using models like `'prodia'` and set NSFW filters.
+- **Chat Memory**: Retain conversation context for richer interactions.
+- **Role-Playing**: Customize the AI’s personality by uploading a file or setting character instructions.
+- **Keyword Responses**: Define specific replies to certain keywords.
+- **Loading Messages**: Show custom messages while AI processes input.
+- **Channel & Permission Settings**: Restrict bot usage to specific channels or users.
+
+---
+
+## 🛠 **Advanced Configuration**
+
+ApexAI allows you to combine multiple features in a single configuration:
 
 ```javascript
 const aiOptions = {
@@ -185,95 +217,24 @@ const aiOptions = {
   },
   imagine: {
     enable: true,
-    // Image processing options...
+    // Image generation options...
   },
   chat: {
-    // Chat processing options...
+    enable: true,
+    // Chat interaction options...
   },
   others: {
-    // Other options...
+    // Other customization options...
   }
 };
 ```
 
-## Features
+💡 **Pro Tip**: You can customize each feature independently or together to build a more interactive and responsive AI.
 
-- **Voice Processing:** Enable voice processing with options to specify voice modal, language, and API key.
-- **Image Processing:** Enable image processing with options for drawing triggers, image models, number of images, and more.
-- **Chat Processing:** Enable chat processing with options for chat model, reading files/images, and type writing.
-- **Keyword Responses:** Define specific keywords and their corresponding responses.
-- **Loader Message:** Display a loading message while processing requests.
-- **Channel Configuration:** Specify channels for the bot to chat in.
-- **Permissions:** Configure permissions for the bot to respond to specific roles and users.
+---
 
+## 📚 **Additional Information**
 
-### Other Moudles Usages:
-
-==- ApexImagen & ApexChat
-
-1.**ApexChat:**
-```js
-    const { ApexChat } = require('apexify.js');
-    
-    await interaction.deferReply()
-    const modal = interaction.options.getString('modal');
-    const prompt = interaction.options.getString('prompt');
-
-
-      const response = await ApexChat(modal, prompt);
-
-      await interaction.editReply({ content: `${response}` });
-```
-
-2.**Valid Chat Modals:**
-
-- v3, v3-32k
-- turbo, turbo-16k
-- gemini, apexChat
-- yi-ai, facebook-ai
-- starChat, gemini-pro
-- gemini-flash
-
-| Name       | Type     | Required | Description                       |
-| :---       | :---:    | ---                               |
-| `response` | `string` | True | The response generated by the AI. |
-| `modal`    | `string` | True | The modal used by the AI.         |
-| `prompt`   | `string` | True | The prompt provided by the user.  |
-
-
-3.**ApexImagine:**
-```js
-await interaction.deferReply();
-
-const modal = interaction.options.getString('modal');
-const prompt = interaction.options.getString('prompt');
-const count = interaction.options.getInteger('count');
-const negativePrompt = interaction.options.getString('negative') || '';
-
-
-  const response = await ApexImagine(modal, prompt, { count: number, negative: negativePrompt });
-
-  const attachments = Array.from(response).map(url => new AttachmentBuilder(url));
-
-  await interaction.editReply({ files: attachments });
-```
-
-4.**Valid Imagine Modals:**
-
-- lexica, prodia 
-- animefy, raava 
-- shonin 
-
-!!!info
-More valid imagine modals at Previews & Samples section.
-!!!
-
-| Name       | Type     | Required | Description                       |
-| :---       | :---:    | ---                               |
-| `response` | `string` | True | The images generated by the AI. |
-| `modal`    | `string` | True | The modal used by the AI.         |
-| `prompt`   | `string` | True | The prompt provided by the user.  |
-| `count`   | `number` | false | Number of images to generate.  |
-| `negative`   | `string` | false | The negative prompt provided by the user.  |
-
-===
+- **AI Models**: Use powerful models like `'gemini'`, `'v3'`, `'llama'`, and more.
+- **Flexible API Keys**: Configure API keys per feature or use the defaults provided.
+- **Completely Customizable**: All options, from voice to chat, can be personalized to suit your needs.
