@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.774353691110">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.780475611753">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.5.0">
+    <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
-    <title>Validating Model</title>
-    <meta name="title" content="Validating Model">
-    <meta name="description" content="To have the ability to check if the current used model in ai and if there is any new models been added you can use the function ">
+    <title>&#127899; validateModels: Initialize and Validate Available Models</title>
+    <meta name="title" content="🎛 validateModels: Initialize and Validate Available Models">
+    <meta name="description" content="validateModels helps in initializing and validating various models and options used in the system.">
 
     <!-- Canonical -->
     <link rel="canonical" href="https://apexifyjs.jedi-studio.com/apexai/valid-options/">
@@ -19,23 +19,23 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://apexifyjs.jedi-studio.com/apexai/valid-options/">
-    <meta property="og:title" content="Validating Model">
-    <meta property="og:description" content="To have the ability to check if the current used model in ai and if there is any new models been added you can use the function ">
+    <meta property="og:title" content="🎛 validateModels: Initialize and Validate Available Models">
+    <meta property="og:description" content="validateModels helps in initializing and validating various models and options used in the system.">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://apexifyjs.jedi-studio.com/apexai/valid-options/">
-    <meta property="twitter:title" content="Validating Model">
-    <meta property="twitter:description" content="To have the ability to check if the current used model in ai and if there is any new models been added you can use the function ">
+    <meta property="twitter:title" content="🎛 validateModels: Initialize and Validate Available Models">
+    <meta property="twitter:description" content="validateModels helps in initializing and validating various models and options used in the system.">
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=3.5.0.774353691110" rel="stylesheet">
+    <link href="../../resources/css/retype.css?v=3.6.0.780475611753" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../resources/js/config.js?v=3.5.0.774353691110" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.5.0.774353691110" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.5.0.774353691110" defer></script>
+    <script data-cfasync="false" src="../../resources/js/config.js?v=3.6.0.780475611753" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../resources/js/lunr.js?v=3.6.0.780475611753" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../resources/js/prism.js?v=3.6.0.780475611753" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -164,57 +164,194 @@
                                 <!-- Rendered if sidebar right is enabled -->
                                 <div id="docs-sidebar-right-toggle"></div>
                                 <!-- Page content  -->
-<doc-anchor-target id="validating-model" class="break-words">
+<doc-anchor-target id="-validatemodels-initialize-and-validate-available-models" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#validating-model">#</doc-anchor-trigger>
-        <span>Validating Model</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-validatemodels-initialize-and-validate-available-models">#</doc-anchor-trigger>
+        <span>🎛 <strong>validateModels: Initialize and Validate Available Models</strong></span>
     </h1>
 </doc-anchor-target>
-<p>To have the ability to check if the current used model in ai and if there is any new models been added you can use the function <code v-pre>validOptions</code>. This allows you to check all valid models in (<code v-pre>ApexImagine</code>/<code v-pre>ApexChat</code>/<code v-pre>ApexAI</code>/<code v-pre>ImageStyle</code>/<code v-pre>Enhancers</code>/<code v-pre>Samplers</code>).</p>
-<doc-anchor-target id="example-usage">
+<p><strong>validateModels</strong> helps in initializing and validating various models and options used in the system. It gathers data about chat models, image models, enhancers, samplers, and more from different sources, ensuring that all provided options are valid and up-to-date.</p>
+<hr>
+<doc-anchor-target id="installation">
     <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#example-usage">#</doc-anchor-trigger>
-        <span>Example Usage</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#installation">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F680;</span> <strong>Installation</strong></span>
     </h2>
 </doc-anchor-target>
-<doc-tabs>
-<doc-tab v-cloak id="js">
-<template #title>JS</template>
+<p>To use <strong>validateModels</strong>, import it from the <code v-pre>apexify.js</code> library:</p>
+<doc-anchor-target id="javascript">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#javascript">#</doc-anchor-trigger>
+        <span>JavaScript</span>
+    </h3>
+</doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-javascript"><code v-pre class="language-javascript">const { validOptions } = require('apexify.js');
-
-const types = await validOptions;
-console.log(types); // To view types object
-console.log(types.validHercaiModals); // View valid modal Imaing of herc.ai
-console.log(types.validApexAI); // View valid chat models of ApexAI 
-console.log(types.validApexChat); // View valid chat models of validApexChat
-console.log(types.validEnhancers); // View valid Enahncers for Imagine
-console.log(types.validSamplers); // View valid Samplers for Imagine
-console.log(types.validImgStyle); // View valid Image Styles models for Imagine
-console.log(types.validSXDL); // View valid SXDL models for Imagine
-console.log(types.validProdiaModals:); // View valid Prodia models for Imagine
-</code></pre>
+<pre class="language-javascript"><code v-pre class="language-javascript">const { validateModels } = require('apexify.js'); </code></pre>
 </doc-codeblock></div>
-</doc-tab>
-<doc-tab v-cloak id="ts">
-<template #title>TS</template>
+<doc-anchor-target id="typescript">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#typescript">#</doc-anchor-trigger>
+        <span>TypeScript</span>
+    </h3>
+</doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-typescript"><code v-pre class="language-typescript">import { validOptions } from 'apexify.js';
-
-
-const types = await validOptions;
-console.log(types); // To view types object
-console.log(types.validHercaiModals); // View valid modal Imaing of herc.ai
-console.log(types.validApexAI); // View valid chat models of ApexAI 
-console.log(types.validApexChat); // View valid chat models of validApexChat
-console.log(types.validEnhancers); // View valid Enahncers for Imagine
-console.log(types.validSamplers); // View valid Samplers for Imagine
-console.log(types.validImgStyle); // View valid Image Styles models for Imagine
-console.log(types.validSXDL); // View valid SXDL models for Imagine
-console.log(types.validProdiaModals:); // View valid Prodia models for Imagine</code></pre>
+<pre class="language-typescript"><code v-pre class="language-typescript">import { validateModels } from 'apexify.js'; </code></pre>
 </doc-codeblock></div>
-</doc-tab>
-</doc-tabs>
+<hr>
+<doc-anchor-target id="validatemodels-overview">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#validatemodels-overview">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x2699;&#xFE0F;</span> <strong>validateModels: Overview</strong></span>
+    </h2>
+</doc-anchor-target>
+<p><code v-pre>validateModels</code> initializes various lists of valid models and options by fetching them from APIs and consolidating the results. It provides a comprehensive set of valid options for chat models, image models, samplers, and more.</p>
+<doc-anchor-target id="example-usage">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#example-usage">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F4CC;</span> <strong>Example Usage</strong></span>
+    </h3>
+</doc-anchor-target>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-javascript"><code v-pre class="language-javascript">const options = await validateModels();
+
+console.log(options.validHercChatModels); // Logs valid Herc chat models
+console.log(options.validImgStyle); // Logs valid image styles</code></pre>
+</doc-codeblock></div>
+<hr>
+<doc-anchor-target id="key-features">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#key-features">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F9E9;</span> <strong>Key Features</strong></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="model-validation">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#model-validation">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F522;</span> <strong>Model Validation</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>Ensures that all provided model names are valid by checking against a list of known models.</p>
+<doc-anchor-target id="dynamic-options">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#dynamic-options">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F4C8;</span> <strong>Dynamic Options</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>Fetches the latest data for models and options from external sources.</p>
+<doc-anchor-target id="comprehensive-lists">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#comprehensive-lists">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F310;</span> <strong>Comprehensive Lists</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>Includes lists for chat models, image models, samplers, and more.</p>
+<hr>
+<doc-anchor-target id="function-breakdown">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#function-breakdown">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F527;</span> <strong>Function Breakdown</strong></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="initializevalidoptions">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#initializevalidoptions">#</doc-anchor-trigger>
+        <span><code v-pre>initializeValidOptions</code></span>
+    </h3>
+</doc-anchor-target>
+<p>The core function that initializes and validates options. It retrieves data from various sources and compiles a comprehensive list of valid options.</p>
+<doc-anchor-target id="returns">
+    <h4>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#returns">#</doc-anchor-trigger>
+        <span><strong>Returns</strong></span>
+    </h4>
+</doc-anchor-target>
+<p>A Promise that resolves to an object containing:</p>
+<ul>
+<li><strong>validHercChatModels</strong>: Array of valid Herc chat models.</li>
+<li><strong>validgroqChatModels</strong>: Array of valid Groq chat models.</li>
+<li><strong>validRSNChatModels</strong>: Array of valid RSN chat models.</li>
+<li><strong>validHercaiModals</strong>: Array of valid Herc image models.</li>
+<li><strong>validProdiaModals</strong>: Array of valid Prodia models.</li>
+<li><strong>validotherChatModels</strong>: Array of valid other chat models.</li>
+<li><strong>validfresedgptModels</strong>: Array of valid FresedGPT models.</li>
+<li><strong>valideElectronChatModels</strong>: Array of valid chat models.</li>
+<li><strong>valideElectronImagineModels</strong>: Array of valid imagine models.</li>
+<li><strong>validEnhancers</strong>: Array of valid image enhancers.</li>
+<li><strong>validSamplers</strong>: Array of valid samplers.</li>
+<li><strong>validSXDL</strong>: Array of valid SDXL models.</li>
+<li><strong>validImgStyle</strong>: Array of valid image styles.</li>
+<li><strong>allModals</strong>: Combined array of all modals including SD, SDXL, Herc, FresedGPT, chat models, and more.</li>
+</ul>
+<doc-anchor-target id="functions-called">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#functions-called">#</doc-anchor-trigger>
+        <span><strong>Functions Called</strong></span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><code v-pre>sdModals()</code>: Fetches the list of SD models.</li>
+<li><code v-pre>sdxlModals()</code>: Fetches the list of SDXL models.</li>
+<li><code v-pre>sampler()</code>: Fetches the list of samplers.</li>
+</ul>
+<hr>
+<doc-anchor-target id="detailed-description">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#detailed-description">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F4DC;</span> <strong>Detailed Description</strong></span>
+    </h2>
+</doc-anchor-target>
+<doc-anchor-target id="1-fetching-models">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#1-fetching-models">#</doc-anchor-trigger>
+        <span><strong>1. Fetching Models</strong></span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong>SD Models</strong>: Retrieved from the <code v-pre>listModels</code> endpoint of the API.</li>
+<li><strong>SDXL Models</strong>: Retrieved from the <code v-pre>listSdxlModels</code> endpoint.</li>
+<li><strong>Samplers</strong>: Retrieved from the <code v-pre>listSamplers</code> endpoint.</li>
+</ul>
+<doc-anchor-target id="2-compiling-valid-options">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#2-compiling-valid-options">#</doc-anchor-trigger>
+        <span><strong>2. Compiling Valid Options</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>Combines the fetched data with predefined arrays for Herc chat models, Groq chat models, RSN chat models, other chat models, and FresedGPT models. Additionally, it includes predefined lists for image enhancers and styles.</p>
+<doc-anchor-target id="3-handling-local-and-remote-data">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#3-handling-local-and-remote-data">#</doc-anchor-trigger>
+        <span><strong>3. Handling Local and Remote Data</strong></span>
+    </h3>
+</doc-anchor-target>
+<ul>
+<li><strong>Local Data</strong>: Uses predefined arrays and values.</li>
+<li><strong>Remote Data</strong>: Fetches updated data from APIs to ensure validity and freshness.</li>
+</ul>
+<hr>
+<doc-anchor-target id="notes">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#notes">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x1F4A1;</span> <strong>Notes</strong></span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li><strong>File Path Handling</strong>: Ensure local paths are relative to the main project directory.</li>
+<li><strong>Dynamic Data</strong>: The lists of valid models and options are updated dynamically, so they reflect the latest available data.</li>
+</ul>
+<hr>
+<doc-anchor-target id="-error-handling">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#-error-handling">#</doc-anchor-trigger>
+        <span>🛠 <strong>Error Handling</strong></span>
+    </h2>
+</doc-anchor-target>
+<ul>
+<li>Provides default values and detailed error messages if data retrieval fails.</li>
+<li>Logs errors to the console for debugging.</li>
+</ul>
+<hr>
+<p>This documentation provides a clear and detailed overview of the <code v-pre>validateModels</code> function, ensuring users understand how to utilize and benefit from the available options.</p>
 
                                 
                                 <!-- Required only on API pages -->
@@ -224,20 +361,20 @@ console.log(types.validProdiaModals:); // View valid Prodia models for Imagine</
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../apexai/ai-function/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Outside Discord</span>
+                                                <span class="block mt-1">Apexify.​js</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../apexpainter/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../apexai/apexlistener/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Apex​Painter Guide</span>
+                                                <span class="block mt-1">🎧 Apex​Listener: Audio Transcription with AI Response</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -281,6 +418,6 @@ console.log(types.validProdiaModals:); // View valid Prodia models for Imagine</
 
     <div id="docs-overlay-target"></div>
 
-    <script data-cfasync="false">window.__DOCS__ = { "title": "Validating Model", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
+    <script data-cfasync="false">window.__DOCS__ = { "title": "🎛 validateModels: Initialize and Validate Available Models", level: 2, icon: "file", hasPrism: true, hasMermaid: false, hasMath: false, tocDepth: 23 }</script>
 </body>
 </html>

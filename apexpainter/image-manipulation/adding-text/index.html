@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.5.0.774353691110">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="3.6.0.780475611753">
 
     <!-- See retype.com -->
-    <meta name="generator" content="Retype 3.5.0">
+    <meta name="generator" content="Retype 3.6.0">
 
     <!-- Primary Meta Tags -->
     <title>Canvas Text Drawing</title>
@@ -30,12 +30,12 @@
 
     <script data-cfasync="false">(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=3.5.0.774353691110" rel="stylesheet">
+    <link href="../../../resources/css/retype.css?v=3.6.0.780475611753" rel="stylesheet">
 
-    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.5.0.774353691110" data-turbo-eval="false" defer></script>
-    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.5.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.5.0.774353691110" data-turbo-eval="false" defer></script>
-    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.5.0.774353691110" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/config.js?v=3.6.0.780475611753" data-turbo-eval="false" defer></script>
+    <script data-cfasync="false" src="../../../resources/js/retype.js?v=3.6.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" data-cfasync="false" src="../../../resources/js/lunr.js?v=3.6.0.780475611753" data-turbo-eval="false" defer></script>
+    <script id="prism-js" data-cfasync="false" src="../../../resources/js/prism.js?v=3.6.0.780475611753" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -229,16 +229,6 @@
     lineHeight: 10,
     textAlign: 'center',
     textBaseline: 'alphabetic',
-    oulined: false,
-    opacity: 0.7,
-    rotation: 360,
-    gradient: {
-      type: 'linear',
-      startX: 0,
-      endX: 300,
-      startY: 0,
-      endY: 0
-    },
     shadow: {
       color: 'white',
       offsetX: 10,
@@ -350,39 +340,15 @@ console.log(textBuffer); // Returns a buffer image.</code></pre>
 </tr>
 <tr>
 <td><code v-pre>textAlign</code></td>
-<td><code v-pre>string</code></td>
-<td>False</td>
-<td>Specifies the text alignment whether center, end, start, left, right, or justify.</td>
+<td><code v-pre>'center' | 'left' | 'right' | 'start'</code></td>
+<td>No</td>
+<td>Specifies the text alignment.</td>
 </tr>
 <tr>
 <td><code v-pre>textBaseline</code></td>
 <td><code v-pre>string</code></td>
 <td>False</td>
-<td>Specifies the baseline for letters whether to be alphabetic, bottom, hanging, ideographic, top, middle.</td>
-</tr>
-<tr>
-<td><code v-pre>outlined</code></td>
-<td><code v-pre>boolean</code></td>
-<td>False</td>
-<td>Specifies whether to make text outlined and non-filled.</td>
-</tr>
-<tr>
-<td><code v-pre>opacity</code></td>
-<td><code v-pre>number</code></td>
-<td>False</td>
-<td>Specifies whether to apply opacity on the text its self.</td>
-</tr>
-<tr>
-<td><code v-pre>rotation</code></td>
-<td><code v-pre>number</code></td>
-<td>False</td>
-<td>Specifies whether to apply rotation to the text.</td>
-</tr>
-<tr>
-<td><code v-pre>gradient</code></td>
-<td><code v-pre>object</code></td>
-<td>False</td>
-<td>Specifies whether to apply gradient colours to the text instead of static colors.</td>
+<td>Specifies the baseline for letters.</td>
 </tr>
 <tr>
 <td><code v-pre>shadow</code></td>
