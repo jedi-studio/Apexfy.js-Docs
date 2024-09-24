@@ -46,16 +46,6 @@ const text = [
     lineHeight: 10,
     textAlign: 'center',
     textBaseline: 'alphabetic',
-    oulined: false,
-    opacity: 0.7,
-    rotation: 360,
-    gradient: {
-      type: 'linear',
-      startX: 0,
-      endX: 300,
-      startY: 0,
-      endY: 0
-    },
     shadow: {
       color: 'white',
       offsetX: 10,
@@ -96,11 +86,7 @@ console.log(textBuffer); // Returns a buffer image.
 | `color`        | `string`                  | False        | Specifies the color of the text.                                                            |
 | `maxWidth`     | `number`                  | False         | Specifies the maximum width of the text for wrapping.                                       |
 | `lineHeight`   | `number`                  | False         | Specifies the line height for wrapped text.                                                 |
-| `textAlign`    | `string` | False | Specifies the text alignment whether center, end, start, left, right, or justify.                                                              |
-| `textBaseline` | `string`                  | False         | Specifies the baseline for letters whether to be alphabetic, bottom, hanging, ideographic, top, middle.                                                         |
-| `outlined`       | `boolean`                 | False         | Specifies whether to make text outlined and non-filled.                                            |
-| `opacity`       | `number`                 | False         | Specifies whether to apply opacity on the text its self.                                            |
-| `rotation`       | `number`                 | False         | Specifies whether to apply rotation to the text.                                            |
-| `gradient`       | `object`                 | False         | Specifies whether to apply gradient colours to the text instead of static colors.                                            |
+| `textAlign`    | `'center' | 'left' | 'right' | 'start'` | No | Specifies the text alignment.                                                              |
+| `textBaseline` | `string`                  | False         | Specifies the baseline for letters.                                                         |
 | `shadow`       | `ShadowOptions`           | False         | Specifies the shadow configuration of the text.                                             |
 | `stroke`       | `StrokeOptions`           | False         | Specifies the stroke configuration of the text.                                             |

@@ -1,5 +1,7 @@
 # Image Style
 
+Those image-styles are used for prodia models only.
+
 - 3d-model
 - analog-film
 - anime

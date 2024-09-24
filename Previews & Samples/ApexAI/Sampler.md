@@ -1,5 +1,7 @@
 # Samplers
 
+ Those smaplers are used for prodia models only.
+ 
 - DPM++ 2M Karras
 - DPM++ SDE Karras
 - DPM++ 2M SDE Exponential

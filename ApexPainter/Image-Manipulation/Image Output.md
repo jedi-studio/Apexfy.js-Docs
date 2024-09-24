@@ -77,3 +77,12 @@ async function run() {
 // Execute the function
 run();
 ```
+
+### Summary
+
+1. **Import the `ApexPainter` class**: This step includes the necessary import statements for both JavaScript and TypeScript.
+2. **Create an instance of `ApexPainter`**: Initialize the `ApexPainter` instance.
+3. **Define your drawings**: Set up the background, images, and text you want to include in your final image.
+4. **Generate the output**: Use the `paint.outPut()` method to convert your final drawing into the desired output format.
+
+This setup allows you to flexibly create and customize images and then export them in various formats as needed.

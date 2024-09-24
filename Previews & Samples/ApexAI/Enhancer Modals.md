@@ -1,5 +1,7 @@
 # Enhancer Modals
 
+Those enhancer models are only used for prodia models
+
 - ESRGAN_4x
 - lanczos 
 - Nearest
